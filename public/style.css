@@ -106,4 +106,57 @@ input, select {
 input:focus, select:focus {
     border-color: #999;
 }
+
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+        padding: 15px;
+    }
+
+    .tb th, .tb td {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    button {
+        width: 100%;
+    }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+
+    .container {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .tb {
+        font-size: 12px;
+    }
+
+    .tb th, .tb td {
+        padding: 8px;
+    }
+
+    /* Table scroll ho jaye instead of breaking */
+    .tb {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    .icon {
+        width: 16px;
+        height: 16px;
+    }
+
+    button {
+        font-size: 13px;
+        padding: 7px;
+    }
+}
  
