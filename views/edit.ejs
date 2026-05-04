@@ -11,12 +11,12 @@
     <h1>Edit Your Task</h1>
 
     <form method="POST" action="/task/<%= taskid.id %>?_method=PATCH">
-        <label>Title:</label><br>
+        <label>Title:</label>
         <input type="text" name="description" value="<%= taskid.description %>"><br>
-        <label>Date:</label><br>
+        <label>Date:</label>
         <input type="date" name="date" value="<%= taskid.date %>"><br>
 
-        <label>Status:</label><br>
+        <label>Status:</label>
     
         <select name="status">
     <option value="pending" <%= taskid.status === "pending" ? "selected" : "" %>>Pending</option>
@@ -24,7 +24,7 @@
     <option value="completed" <%= taskid.status === "completed" ? "selected" : "" %>>Completed</option>
 </select>
  <br>
-  <button type="submit">Update Task</button>
+  <button type="submit" class="update">Update Task</button>
     </form>
  
 </body>
