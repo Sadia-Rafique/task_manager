@@ -1,6 +1,6 @@
 const express=require("express");
 const app=express();
-const port=3000;
+const port = process.env.PORT || 3000;
 const path=require("path");
 const { v4: uuidv4 } = require("uuid");
 const methodOverride = require("method-override");
@@ -11,14 +11,7 @@ app.use(express.static(path.join(__dirname,"public")));
 app.use(methodOverride("_method"));
 
 // dumy data
-let tasks=[
-    {
-        id:uuidv4(),
-        description:"Work on Project",
-        date:"2-5-2026",
-        status:"Pending"
-    }
-]
+let tasks=[]
 app.get("/",(req,res)=>{
     res.redirect("task");
 })

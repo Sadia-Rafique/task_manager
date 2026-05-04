@@ -10,7 +10,7 @@ body {
 
 /* Container */
 .container {
-    width: 750px;
+    width: 850px;
     background-color: #ffffff;
     border-radius: 12px;
     padding: 20px;
@@ -27,16 +27,17 @@ body {
 }
 
 .tb th {
-    background-color: #e9ecef;
-    color: #333;
+    background-color: #454646;
+    color: #eae5e5;
     padding: 12px;
     font-weight: bold;
 }
 
 .tb td {
     padding: 12px;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid #d4d1d1;
     text-align: center;
+    
 }
 
 /* Row hover effect */
@@ -54,7 +55,7 @@ td form {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    margin: 0 5px;
+   
 }
 
 /* Icons */
