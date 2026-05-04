@@ -20,7 +20,7 @@ let tasks=[
     }
 ]
 app.get("/",(req,res)=>{
-    res.redirect("index");
+    res.redirect("task");
 })
 // get data
 app.get("/task",(req,res)=>{
@@ -28,7 +28,7 @@ app.get("/task",(req,res)=>{
 })
 //  for new post:
 app.get("/task/new",(req,res)=>{
-    res.render("new.ejs")
+    res.render("new")
 })
 
 app.post("/task", (req, res) => {
@@ -46,7 +46,7 @@ app.post("/task", (req, res) => {
 app.get("/task/:id/edit",(req,res)=>{
     let {id}=req.params;
     let taskid=tasks.find((t)=> t.id== id)
-    res.render("edit.ejs",{taskid})
+    res.render("edit",{taskid})
 });
 // for update :
 app.patch("/task/:id", (req, res) => {
