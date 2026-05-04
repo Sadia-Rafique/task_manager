@@ -1,3 +1,4 @@
+
 body{
     display: flex;
     justify-content: center;
@@ -6,22 +7,26 @@ body{
     flex-direction: column;
 }
 
+/* Form */
 form {
     display: flex;
     flex-direction: column;
-    gap:4px;
+    gap:8px;
     width: 400px;
     min-height: 250px;
     background-color: rgb(200, 223, 223);
     border-radius: 10px;
+    padding: 15px;
 }
 
+/* Labels */
 label {
     font-size: 18px;
     color: #333;
     font-weight: bold;
 }
 
+/* Inputs */
 input {
     padding: 8px;
     border: 1px solid #ccc;
@@ -45,6 +50,7 @@ select {
     cursor: pointer;
 }
 
+/* Buttons */
 button{
     background-color: rgb(200, 223, 223);
     padding: 8px;
@@ -52,8 +58,9 @@ button{
     font-size: 16px;
     border: 1px solid #ccc;
 }
+
 .update {
-    background-color: #4CAF50;   /* green */
+    background-color: #4CAF50;
     color: white;
     padding: 10px 15px;
     border: none;
@@ -61,4 +68,61 @@ button{
     font-size: 16px;
     cursor: pointer;
     transition: 0.3s ease;
+}
+.submit{
+      background-color: #4CAF50;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s ease;
+
+}
+
+/* ============ MEDIA QUERIES ============ */
+
+/* Tablet */
+@media (max-width: 768px) {
+    form {
+        width: 90%;
+        padding: 12px;
+    }
+
+    label {
+        font-size: 16px;
+    }
+
+    input, select {
+        font-size: 13px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+
+    form {
+        width: 100%;
+        padding: 10px;
+        gap:6px;
+    }
+
+    label {
+        font-size: 14px;
+    }
+
+    input, select {
+        font-size: 12px;
+        padding: 6px;
+    }
+
+    button, .update {
+        font-size: 13px;
+        padding: 8px;
+        width: 100%; /* full width button */
+    }
 }

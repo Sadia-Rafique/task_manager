@@ -106,7 +106,9 @@ input, select {
 input:focus, select:focus {
     border-color: #999;
 }
+/* ================= MEDIA QUERIES ================= */
 
+/* Tablet */
 @media (max-width: 768px) {
     .container {
         width: 95%;
@@ -114,8 +116,8 @@ input:focus, select:focus {
     }
 
     .tb th, .tb td {
-        padding: 10px;
-        font-size: 14px;
+        padding: 8px;
+        font-size: 13px;
     }
 
     button {
@@ -134,29 +136,50 @@ input:focus, select:focus {
         padding: 10px;
     }
 
-    .tb {
-        font-size: 12px;
-    }
-
+    /* Table compact */
     .tb th, .tb td {
-        padding: 8px;
+        padding: 6px;
+        font-size: 11px;
     }
 
-    /* Table scroll ho jaye instead of breaking */
-    .tb {
-        display: block;
-        overflow-x: auto;
+    /* Column width control */
+    .tb th:nth-child(1),
+    .tb td:nth-child(1) {
+        width: 30%; /* description */
+    }
+
+    .tb th:nth-child(2),
+    .tb td:nth-child(2) {
+        width: 25%; /* date */
+    }
+
+    .tb th:nth-child(3),
+    .tb td:nth-child(3) {
+        width: 20%; /* status */
+    }
+
+    .tb th:nth-child(4),
+    .tb td:nth-child(4) {
+        width: 25%; /* actions */
+    }
+
+    /* Text overflow handling */
+    .tb td {
         white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
 
+    /* Icons small */
     .icon {
-        width: 16px;
-        height: 16px;
+        width: 14px;
+        height: 14px;
     }
 
     button {
-        font-size: 13px;
-        padding: 7px;
+        font-size: 12px;
+        padding: 6px;
     }
 }
- 
+
+
