@@ -19,6 +19,9 @@ let tasks=[
         status:"Pending"
     }
 ]
+app.get("/",(req,res)=>{
+    res.redirect("index");
+})
 // get data
 app.get("/task",(req,res)=>{
   res.render("index",{tasks});
