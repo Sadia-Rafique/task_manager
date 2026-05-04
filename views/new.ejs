@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/styletwo.css">
+</head>
+<body>
+    <h1>Add new task</h1>
+    <form action="/task" method="POST">
+    <label for="description">Title</label><br>
+  <input name="description" placeholder="Task" /><br>
+  <label for="date">Date</label><br>
+  <input type="date" name="date" /><br>
+ <label for="status">Status</label><br>
+  <select name="status">
+    <option>Pending</option>
+    <option>Completed</option>
+  </select>
+   <button type="submit">Submit</button></a> 
+</form>
+  
+</body>
+</html>

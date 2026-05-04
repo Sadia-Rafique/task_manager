@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Task</title>
+    <link rel="stylesheet" href="/styletwo.css">
+</head>
+<body>
+
+    <h1>Edit Your Task</h1>
+
+    <form method="POST" action="/task/<%= taskid.id %>?_method=PATCH">
+        <label>Title:</label><br>
+        <input type="text" name="description" value="<%= taskid.description %>"><br>
+        <label>Date:</label><br>
+        <input type="date" name="date" value="<%= taskid.date %>"><br>
+
+        <label>Status:</label><br>
+    
+        <select name="status">
+    <option value="pending" <%= taskid.status === "pending" ? "selected" : "" %>>Pending</option>
+    <option value="in-progress" <%= taskid.status === "in-progress" ? "selected" : "" %>>In Progress</option>
+    <option value="completed" <%= taskid.status === "completed" ? "selected" : "" %>>Completed</option>
+</select>
+ <br>
+  <button type="submit">Update Task</button>
+    </form>
+ 
+</body>
+</html>

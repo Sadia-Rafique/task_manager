@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1> Task Manger</h1>
+    <div class="container">
+         <table class="tb">
+            <thead>
+                <th>ID</th>
+                <th>Title</th>
+                <th>Date</th>
+                <th>Status</th>
+                <th>Action</th>
+            </thead>
+            <tbody>
+                   <% tasks.forEach(task => { %>
+      <tr>
+        <td><%= task.id %></td>
+        <td><%= task.description %></td>
+        <td><%= task.date%></td>
+        <td><%= task.status %></td>
+        <td><a href="/task/<%= task.id %>/edit"><img class="icon" src="/images/edit (1).png" alt=""></a>
+        <form  method="POST" action="/task/<%=task.id%>?_method=DELETE">
+            <button type="method" ><img  class="icon" src="/images/delete.png" alt="" srcset=""></button>
+        </form>
+        </td>
+
+      </tr>
+    <% }) %>
+            </tbody>
+         </table>
+         
+    </div>
+    <a href="/task/new"><Button>Add new task</Button></a>
+</body>
+</html>
